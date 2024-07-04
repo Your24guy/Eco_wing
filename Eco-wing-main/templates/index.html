@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>EcoWing</title>
+    <link href="./static/index.css" rel="" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/static/styles.css">
+  </head>
+  <style>
+    body {
+        background-image: url('/static/bg.jpg');
+        background-color: #cccccc;
+        height: 150vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: #fff;
+      }
+      .container, .container1 {
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+    flex-wrap: wrap;
+  }
+  
+  </style>
+
+  <body>
+      
+    <div class="navbar">
+      <div class="left">
+        <h1>EcoWing</h1>
+      </div>
+      <div class="right">
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="#abt-us">About Us</a>
+        <a href="#footer">Contact</a>
+        <a href="{{ url_for('login') }}">Login</a>
+      </div>
+    </div>
+
+    <div class="main-container">
+      <div class="container">
+        <div class="card">
+          <div class="border-box">
+            <h1><strong>Multispectral <br /> Image</strong></h1>
+            <div class="card-body">
+              <h5 class="card-title">Multispectral(image) Analysis</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up the bulk of the card's content.
+              </p>
+              <a href="{{ url_for('multispectral') }}" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="border-box">
+            <h1><strong>Hyperspectral <br /> Image</strong></h1>
+            <div class="card-body">
+              <h5 class="card-title">Hyperspectral(image) Analysis</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up the bulk of the card's content.
+              </p>
+              <a href="{{ url_for('hyperspectral') }}" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="border-box">
+            <h1><strong>Thermal <br /> Image</strong></h1>
+            <div class="card-body">
+              <h5 class="card-title">Thermal(image) Analysis</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up the bulk of the card's content.
+              </p>
+              <a href="{{ url_for('thermal') }}" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="border-box">
+            <h1><strong>LiDAR <br /> (Light Detection & Ranging)</strong></h1>
+            <div class="card-body">
+              <h5 class="card-title">LiDAR Analysis</h5>
+              <p class="card-text">
+                LiDAR measures distance by illuminating the target with laser light and analyzing the reflected light. It's essential for creating high-resolution maps and 3D models.
+              </p>
+              <a href="{{ url_for('lidar') }}" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="border-box">
+            <h1><strong>Gas Sensor <br /> Analysis</strong></h1>
+            <div class="card-body">
+              <h5 class="card-title">Gas Sensor Analysis</h5>
+              <p class="card-text">
+                Gas sensors detect CO2, methane, and other gases, providing critical data for air quality monitoring and greenhouse gas emission studies.
+              </p>
+              <a href="{{ url_for('gassensor') }}" class="btn btn-primary">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="container1">
+
+      </div>
+    </div>
+    
+
+
+    <div class="abt-main" id="abt-us">
+      <div class="About-us">
+        <h1 class="title">What Is This About...!?</h1>
+        <p>
+          Our company specializes in providing advanced analytical data and environmental monitoring solutions through state-of-the-art imaging and sensing technologies. We cater to a diverse range of industries by offering detailed insights and actionable data derived from various types of imagery and environmental sensors.
+        </p>
+        <ul class="list-activites">
+          <h2>Multispectral, Hyperspectral, and Thermal Imaging Analytics</h2>
+          <li class="list-activites-01">
+            <h5>Multispectral Imaging</h5>
+            <ul class="sub-activites">
+              <li class="sub-activites-01">
+                Captures data across multiple wavelengths, providing valuable information for applications in agriculture, forestry, and environmental monitoring.
+              </li>
+              <li class="sub-activites-01">
+                Enables precise vegetation analysis, soil health assessment, and crop monitoring, aiding in sustainable agricultural practices.
+              </li>
+            </ul>
+          </li>
+          <li class="list-activites-01">
+            <h5>Hyperspectral Imaging</h5>
+            <ul class="sub-activites">
+              <li class="sub-activites-01">
+                Offers high-resolution spectral data across a wide range of wavelengths, allowing for detailed material identification and classification.
+              </li>
+              <li class="sub-activites-01">
+                Applications include mineral exploration, water quality assessment, and vegetation mapping.
+              </li>
+            </ul>
+          </li>
+          <li class="list-activites-01">
+            <h5>Thermal Imaging</h5>
+            <ul class="sub-activites">
+              <li class="sub-activites-01">
+                Detects temperature variations and provides thermal data crucial for infrastructure monitoring, energy audits, and environmental studies.
+              </li>
+              <li class="sub-activites-01">
+                Helps in identifying heat leaks, monitoring wildlife, and detecting forest fires.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="contact-us" id="contact-us">
+      <h1 class="title">Contact Us</h1>
+      <p>We'd love to hear from you! Whether you have a question about our services, need assistance, or just want to provide feedback, we're here to help.</p>
+      <form>
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+    
+  <div class="footer" id="footer">
+    <p>&copy; 2024 My Website</p>
+    <p>Contact us: info@EcoWing-Monitor.com | +1 (555) 123-4567</p>
+    <p class="social-icons">
+        <a href="https://facebook.com" target="_blank">Facebook</a> |
+        <a href="https://twitter.com" target="_blank">Twitter</a> |
+        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+    </p>
+    <p>1234 Main St, Anytown, USA</p>
+</div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

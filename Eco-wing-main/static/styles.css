@@ -1,0 +1,248 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 8px 30px;
+    font-family: 'Bebas Neue', sans-serif;
+  }
+
+  .navbar .left h1 {
+    font-size: 24px;
+    margin: 0;
+    color: white;
+  }
+
+  .navbar .right {
+    display: flex;
+    gap: 20px;
+  }
+
+  .navbar .right a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .navbar .right a:hover {
+    background-color: #575757;
+    color: #fff;
+    border-radius: 5px;
+  }
+
+
+  .main-container {
+    padding: 50px 20px;
+  }
+  
+
+  .card {
+    font-family: "Bebas Neue", sans-serif;
+    background-color: rgba(200, 200, 200, 0.1);
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    color: white;
+    margin: 20px;
+    border-radius: 10px;
+    width: 300px;
+    overflow: hidden;
+    transition: transform 0.3s, background-color 0.3s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .card h1 {
+    padding: 20px;
+    font-size: 1.5em;
+  }
+  
+  .card-body {
+    padding: 20px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .card-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .card-text {
+    font-size: 1em;
+    line-height: 1.5;
+  }
+  
+  a.btn-primary {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #228b22;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  a.btn-primary:hover {
+    background-color: white;
+    color: #228b22;
+  }
+  
+  .border-box {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+  }
+    /*Footer*/
+    .footer {
+        background-color:black ;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        
+        width: 100%;
+        bottom: 0;
+    }
+  
+  
+  .About-us {
+    background-color: white;
+    height: auto;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    font-family: "Merriweather", serif;
+  }
+  
+  .About-us h1.title {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #228b22;
+  }
+  
+  .About-us p {
+    color: rgb(62, 62, 62);
+    line-height: 1.5;
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 300;
+  }
+  
+  .About-us ul.list-activites {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    animation: 0.5s SlideInRight forwards;
+    color: rgb(96, 96, 96);
+  
+  }
+  
+  .About-us ul.list-activites h2 {
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    color: rgb(111, 111, 111);
+  
+  }
+  
+  .About-us ul.list-activites li {
+    margin-bottom: 10px;
+    color: gray;
+  
+  }
+  
+  .About-us ul.list-activites .list-activites-01 h5 {
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
+    color: rgb(68, 68, 68);
+  
+    font-size: 25px;
+  }
+  
+  @keyframes SlideInRight {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .contact-us {
+    background-color: white;
+    color: rgb(39, 39, 39);
+  
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    font-family: "Merriweather", serif;
+  }
+  
+  .contact-us h1.title {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #228b22;
+  }
+  
+  .contact-us p {
+    line-height: 1.5;
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 300;
+  }
+  
+  .contact-us .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .contact-us .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    margin-left: 300px;
+  
+  }
+  
+  .contact-us .form-group input,
+  .contact-us .form-group textarea {
+  
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-left: 300px;
+  }
+  
+  .contact-us .form-group textarea {
+    resize: vertical;
+  }
+  
+  .contact-us button {
+    background-color: #228b22;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 300px;
+  
+  }
+  
+  .contact-us button:hover {
+    background-color: #1e7e1e;
+  }
+  

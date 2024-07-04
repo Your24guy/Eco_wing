@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Thermal Analysis Results</title>
+</head>
+<body>
+    <h1>Thermal Image Analysis Results</h1>
+    <p>Min Temperature: {{ results.min_temp }}°C</p>
+    <p>Max Temperature: {{ results.max_temp }}°C</p>
+    <p>Mean Temperature: {{ results.mean_temp }}°C</p>
+    <h2>Thermal Image with Hot Spots</h2>
+    <img src="{{ url_for('static', filename=results.thermal_image_path) }}" alt="Thermal Image with Hot Spots">
+    <br><br>
+    <a href="{{ url_for('index') }}">Upload another image</a>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>EcoWing-MultiSpectral</title>
+    <link href="./static/index.css" rel="">
+    <link rel="stylesheet" href="/static/styles.css">
+   
+</head>
+<style>
+  
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5dc;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        /*NavBar */
+        .navbar {
+          display: flex;
+          justify-content: flex-end;
+          background-color: black;
+          padding: 15px;
+          
+    
+      }
+      .navbar a {
+        border:1px solid transparent;
+        margin-right:1em;
+        font-size:20px;
+        font-family: "Bebas Neue", sans-serif;
+        border-radius: 5px;
+          color: white;
+          text-decoration: none;
+          padding: 14px 20px;
+          transition: all 0.5s ease-in-out;  
+          text-align: center;
+      }
+      .navbar a:hover {
+          border-radius:10px;
+          background-color: #575757;
+      }
+      .content {
+          padding: 20px;
+      }
+      /*Footer*/
+      .footer {
+          background-color:black ;
+          color: white;
+          text-align: center;
+          padding: 10px 0;
+          position:relative;
+          bottom:0px;
+          width: 100%;
+          top:100%;
+      }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 108px;
+            border: 2px solid #8b4513;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 12px 24px 0px rgb(174 23 23 / 10%);
+            transition:box-shadow 0.7s ease-in-out;
+            &:hover{
+                box-shadow: 12px 24px 5px rgb(174 23 23 / 10%);
+            }
+        }
+
+        h1 {
+            text-align: center;
+            color: #228b22;
+        }
+
+        h1 strong {
+            color: #8b4513;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            font-size: 2.2em;
+            margin-bottom: 10px;
+        }
+
+        input[type="file"] {
+            margin-bottom: 20px;
+        }
+
+        input[type="submit"] {
+            background-color: #228b22;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #006400;
+        }
+    
+</style>
+
+<body>
+      
+    <div class="navbar">
+        <div class="left">
+          <h1>EcoWing</h1>
+        </div>
+        <div class="right">
+          <a href="{{ url_for('index') }}">Home</a>
+          <a href="#abt-us">About Us</a>
+          <a href="#footer">Contact</a>
+          <a href="{{ url_for('login') }}">Login</a>
+        </div>
+      </div>
+   <div class="container">
+
+<!-- here we have to use try and except for check the connection is build or not -->
+ 
+<h1>Hardware Connection Failed, Please check connection</h1>
+    </div>
+
+    
+    <div class="footer" id="footer">
+        <p>&copy; 2024 My Website</p>
+        <p>Contact us: info@EcoWing.com | +1 (555) 123-4567</p>
+        <p class="social-icons">
+            <a href="https://facebook.com" target="_blank">Facebook</a> |
+            <a href="https://twitter.com" target="_blank">Twitter</a> |
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+        </p>
+        <p>1234 Main St, Anytown, USA</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>EcoWing-Thermal</title>
+    <link href="./static/index.css" rel="">
+   <link rel="stylesheet" href="/static/styles.css">
+</head>
+<style>
+    /* Basic Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f5f5dc;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    
+    /* Content (adjust for Thermal page) */
+    .content {
+      padding: 20px;
+    }
+    
+    .content h2 { /* Add an H2 for Thermal page content */
+      text-align: center;
+      color: #228b22;
+      font-size: 2em;
+    }
+    
+    .content p { /* Add paragraphs for Thermal page content */
+      line-height: 1.5; /* Adjust line spacing for readability */
+    }
+    
+    
+    /* Container */
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 108px;
+      border: 2px solid #8b4513;
+      border-radius: 10px;
+      background-color: #fff;
+      box-shadow: 12px 24px 0px rgb(174 23 23 / 10%);
+      transition: box-shadow 0.7s ease-in-out;
+    }
+    
+    .container:hover {
+      box-shadow: 12px 24px 5px rgb(174 23 23 / 10%);
+    }
+    
+    /* Title (modify for Thermal page) */
+    h1 {
+      text-align: center;
+      color: #8b4513; /* Consider a different color for Thermal page */
+    }
+    
+    h1 strong {
+      color: #228b22; /* Consider a different color for Thermal page emphasis */
+    }
+    
+    /* Form */
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    label {
+      font-size: 2.2em;
+      margin-bottom: 10px;
+    }
+    
+    input[type="file"] {
+      margin-bottom: 20px;
+    }
+    
+    input[type="submit"] {
+      background-color: #228b22;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    input[type="submit"]:hover {
+      background-color: #006400;
+    }
+    .container.enter {
+      animation: enter 0.5s ease-in-out forwards;
+    }
+    
+    @keyframes enter {
+      from {
+        transform: scale(0.8); /* Start slightly shrunk */
+        opacity: 0; /* Start invisible */
+      }
+      to {
+        transform: scale(1); /* Animate to normal size */
+        opacity: 1; /* Animate to fully visible */
+      }
+    }
+</style>
+
+<body>
+       
+  <div class="navbar">
+    <div class="left">
+      <h1>EcoWing</h1>
+    </div>
+    <div class="right">
+      <a href="{{ url_for('index') }}">Home</a>
+      <a href="#abt-us">About Us</a>
+      <a href="#footer">Contact</a>
+      <a href="{{ url_for('login') }}">Login</a>
+    </div>
+  </div>
+
+
+   <div class="container enter">
+    <h1 class="Image-upload">Upload an <Strong>Thermal</strong>Image for Analysis</h1>
+        <form action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data">
+            <label for="file">Choose a file:</label>
+            <input type="file" id="file" name="file" accept=".tif,.tiff">
+            <input type="submit" value="Upload">
+        </form>
+    </div>
+
+    
+    <div class="footer" id="footer">
+      <p>&copy; 2024 My Website</p>
+      <p>Contact us: info@EcoWing.com | +91 93456 75689</p>
+      <p class="social-icons">
+          <a href="https://facebook.com" target="_blank">Facebook</a> |
+          <a href="https://twitter.com" target="_blank">Twitter</a> |
+          <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+      </p>
+      <p>1234 Main St, Anytown, USA</p>
+  </div>
+</body>
+</html>

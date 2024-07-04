@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoWing-Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .navbar {
+            display: flex;
+            justify-content: flex-end;
+            background-color: #333;
+            padding: 10px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            text-align: center;
+        }
+        .navbar a:hover {
+            background-color: #575757;
+        }
+        .content {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 2em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            background-color: #fff;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        /* Footer */
+        .footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 40px;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+            }
+            .navbar a {
+                padding: 10px;
+                width: 100%;
+                text-align: left;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+            p {
+                font-size: 1em;
+            }
+        }
+        @media (max-width: 480px) {
+            .content {
+                padding: 10px;
+            }
+            .navbar a {
+                padding: 8px;
+            }
+            h1 {
+                font-size: 1.5em;
+            }
+            h2 {
+                font-size: 1.2em;
+            }
+            p {
+                font-size: 0.9em;
+            }
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #333;
+            font-size: 2em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 1.2em;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .ndvi-image {
+            text-align: center;
+            margin-top: 30px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            background-color: #fff;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+            table, th, td {
+                font-size: 1em;
+            }
+        }
+        @media (max-width: 480px) {
+            .container {
+                padding: 10px;
+            }
+            h1 {
+                font-size: 1.5em;
+            }
+            h2 {
+                font-size: 1.2em;
+            }
+            table, th, td {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="about.html">About Us</a>
+        <a href=#footer>Contact</a>
+        <a href="{{ url_for('login') }}">Login</a>
+    </div>
+    <div class="container">
+        <h1>Analysis Results</h1>
+        <table>
+            <tr>
+                <th>Parameter</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Soil Composition</td>
+                <td>{{ results.soil_composition }}</td>
+            </tr>
+            <tr>
+                <td>Water Quality</td>
+                <td>{{ results.water_quality }}</td>
+            </tr>
+        </table>
+        <div class="ndvi-image">
+            <h2>NDVI Image</h2>
+            <img src="{{ url_for('static', filename=ndvi_image_path) }}" alt="NDVI Image">
+        </div>
+    </div>
+    <div class="footer" id="footer">
+        <p>&copy; 2024 My Website</p>
+        <p>Contact us: info@EcoWing.com | +1 (555) 123-4567</p>
+        <p class="social-icons">
+            <a href="https://facebook.com" target="_blank">Facebook</a> |
+            <a href="https://twitter.com" target="_blank">Twitter</a> |
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+        </p>
+        <p>1234 Main St, Anytown, USA</p>
+    </div>
+</body>
+</html>
+
